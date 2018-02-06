@@ -1,0 +1,15 @@
+version: "2"
+services:
+  dev_docker:
+    container_name: "dev_docker"
+    image: "dev_docker"
+    environment:
+      - NODE_ENV=development
+    ports:
+      - 8080:8080
+      - 9000:9000
+    volumes:
+      - d:/nop:/nop
+    working_dir: /nop
+    stdin_open: true
+    tty: true
